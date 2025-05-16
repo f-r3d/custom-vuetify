@@ -11,8 +11,6 @@
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
     "types": ["vite/client"],
-    "strictNullChecks": false,
-    "skipLibCheck": true,
   },
   "include": ["src/plugins/*.ts", "src/plugins/*.d.ts", "src/plugins/*.tsx", "src/plugins/*.vue"]
 }
