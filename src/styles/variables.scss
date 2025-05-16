@@ -1,0 +1,67 @@
+// :root {
+//     --btn-color: #925ef3; /* Colore del bottone */
+//     --btn-hover-color: #6a1d97; /* Colore del bottone all'hover */
+//     --dlg-bg-color: rgba(0, 128, 128, 0.24);
+//     --dlg-color: rgb(0, 128, 128);
+//     --card-color: rgb(237, 248, 81);
+//   }
+
+@use 'vuetify/settings' with (
+  // $color-pack: false,
+  $button-elevation: ('default': 0, 'hover': 2, 'active': 6),
+
+  $body-font-family: ('Open Sans', sans-serif)
+
+
+);
+
+$heading-font-family: "Source Sans Pro", sans-serif;
+
+body {
+  scrollbar-face-color: rgba(0, 0, 0, 0.2);
+  scrollbar-track-color: rgba(230, 230, 230, 0.6);
+}
+
+::-webkit-scrollbar { width: 0.5em; height: 0.5em;}
+::-webkit-scrollbar-thumb { background: rgba(0, 0, 0, 0.2); }
+::-webkit-scrollbar-track { background: rgba(230, 230, 230, 0.6); }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: $heading-font-family;
+  font-weight: 400;
+}
+
+// .ds-button-with-icon .v-field {border-radius: 24px;}
+.ds-button-with-icon {
+  input {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+}
+
+// input paginazione
+.ds-pagination-input {
+  input {
+    padding-right: 2px;
+    text-align: right;
+  }
+  .v-field__outline>* {
+    border-color: #aaa;
+  }
+}
+
+// versione card immagine con mouseover
+.image-hover-card {
+  .v-img__img--cover {
+    opacity: .3;
+    transition: all 0.3s;
+  }
+
+  &:hover .v-img__img--cover {
+    left: -10%;
+    top: -10%;
+    width: 120%;
+    height: 120%;
+    transition: all 0.3s;
+  }
+}
