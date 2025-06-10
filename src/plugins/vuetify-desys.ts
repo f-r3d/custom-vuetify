@@ -19,6 +19,9 @@ import { VBtn } from 'vuetify/components/VBtn'
 import { createVuetify, type ThemeDefinition } from 'vuetify'
 import { VDateInput } from 'vuetify/labs/VDateInput'
 
+import * as components from 'vuetify/components'
+import * as directives from 'vuetify/directives'
+
 const desysThemeLight: ThemeDefinition = {
   dark: false,
   // text: {
@@ -89,9 +92,6 @@ export default createVuetify({
     VBtnSecondary: VBtn,
     VBtnPrimary: VBtn,
   },
-  components: {
-    VDateInput
-  },
   // lang: {
   //   t: (key, ...params) => i18n.t(key, params),
   // },
@@ -139,9 +139,11 @@ export default createVuetify({
       density: 'compact'
     }
   },
+  components,
+  directives
 })
 
 // export necessari per la pubblicazione della libreria
-export * from 'vuetify/components'
-export * from 'vuetify/directives'
-export * from 'vuetify/labs/components'
+// export * from 'vuetify/components'
+// export * from 'vuetify/directives'
+// export * from 'vuetify/labs/components'
